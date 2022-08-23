@@ -1,3 +1,5 @@
+// PARA INICIAR PRUEBAS EJECUTAR EL COMANDO: "yarn test"
+
 describe("Pruebas en <DemoComponent>", () => {
   test("Primera Prueba", () => {
     
