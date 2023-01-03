@@ -1,7 +1,7 @@
 import { getHeroeById, getHeroesByOwner } from "../../src/base-pruebas/08-imp-exp";
 import heroes from "../../src/data/heroes";
 
-describe('Pruebas para Determinar un Heroe oir nombre o owner', () => { 
+describe('Pruebas para Determinar un Heroe por name or owner', () => { 
     
     test('getHeroeById - Determinar un Héroe por Id', () => {
 
@@ -43,7 +43,7 @@ describe('Pruebas para Determinar un Heroe oir nombre o owner', () => {
 
     });
 
-    test('getHeroesByOwner debe retornar los heroes por owner', () => {
+    test('getHeroesByOwner debe retornar los heroes por owner (Marvel)', () => {
         const owner = 'Marvel';
         const heroesMarvel = getHeroesByOwner(owner);
         expect( heroesMarvel.length ).toEqual(2)
