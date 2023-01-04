@@ -11,14 +11,17 @@ const getNameUsers = () =>  {
   return users;  
 }
 
-// Desestructuando los Props {title, subtitle, age}
-export const FirstApp = ({title, subtitle , age}) => { 
+// Desestructuando los Props {title, subTitle, age}
+export const FirstApp = ({ title, subTitle, name}) => { 
  
   return (
     <>
-    <h1> {title} </h1>
-    <h2> {`${getNameUsers().name} ${age} Años `}</h2>
-    <h3> { subtitle } </h3>
+    <h1>{ title }</h1>
+    <p> { name } </p>
+    {/* <h2> {`${getNameUsers().name} ${age} Años `}</h2>
+    <h3> { subtitle } </h3> */}
+    <p> { subTitle } </p>
+    
     </>
   )
   
@@ -28,15 +31,14 @@ export const FirstApp = ({title, subtitle , age}) => {
 
 FirstApp.propTypes = {
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string,
-  age: PropTypes.string, 
+  subTitle: PropTypes.string,
+  name: PropTypes.string, 
 }
 
 // Definiendo los defaultProps (Se ejecutan primero que los PropTypes)
 FirstApp.defaultProps = {
   name: 'Neider Hernández',
   /* title: "Titulo no especificado", */
-  subtitle: "Software Engineer",
-  age: "Edad no especificada",
+  subTitle: "Software Engineer",
 
 }
